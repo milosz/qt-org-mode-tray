@@ -33,7 +33,7 @@ void SystemTray::createTrayIcon(){
     trayIconMenu->addAction(quitAction);
 
     trayIcon=new QSystemTrayIcon(this);
-    QIcon icon("E");
+    QIcon icon(":/icon.png");
     trayIcon->setIcon(icon);
 
     trayIcon->setContextMenu(trayIconMenu);

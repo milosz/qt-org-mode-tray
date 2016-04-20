@@ -18,3 +18,6 @@ SOURCES += main.cpp\
 HEADERS  += systemtray.h
 
 FORMS    += systemtray.ui
+
+RESOURCES += \
+    trayicon.qrc
