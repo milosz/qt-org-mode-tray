@@ -4,20 +4,14 @@
 #include <QtGui>
 
 SystemTray::SystemTray(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::SystemTray)
+    QWidget(parent)
 {
-    ui->setupUi(this);
-
     createActions();
     createTrayIcon();
-    trayIcon->show();
+
 }
 
-SystemTray::~SystemTray()
-{
-    delete ui;
-}
+SystemTray::~SystemTray() {}
 
 void SystemTray::createActions(){
     ideaAction=new QAction(tr("Add an &idea"),this);
@@ -37,6 +31,10 @@ void SystemTray::createTrayIcon(){
     trayIcon->setIcon(icon);
 
     trayIcon->setContextMenu(trayIconMenu);
+}
+
+void SystemTray::show() {
+    trayIcon->show();
 }
 
 void SystemTray::openIdeaDialog()
