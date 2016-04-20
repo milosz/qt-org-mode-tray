@@ -1,6 +1,8 @@
 #include "systemtray.h"
 #include "ui_systemtray.h"
 
+#include "ideadialog.h"
+
 #include <QtGui>
 
 SystemTray::SystemTray(QWidget *parent) :
@@ -46,6 +48,8 @@ void SystemTray::show() {
 void SystemTray::openIdeaDialog()
 {
     qDebug("Add an idea");
+    IdeaDialog dialog;
+    dialog.exec();
 }
 
 void SystemTray::openToDoDialog()

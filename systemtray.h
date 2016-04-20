@@ -28,7 +28,6 @@ private:
     QMenu *trayIconMenu;
     void createActions();
     void createTrayIcon();
-
 };
 
 #endif // SYSTEMTRAY_H
