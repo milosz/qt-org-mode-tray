@@ -2,6 +2,7 @@
 #include "ui_systemtray.h"
 
 #include "ideadialog.h"
+#include "tododialog.h"
 
 #include <QtGui>
 
@@ -47,14 +48,14 @@ void SystemTray::show() {
 
 void SystemTray::openIdeaDialog()
 {
-    qDebug("Add an idea");
     IdeaDialog dialog;
     dialog.exec();
 }
 
 void SystemTray::openToDoDialog()
 {
-    qDebug("Add a todo");
+    TodoDialog dialog;
+    dialog.exec();
 }
 
 void SystemTray::openBkmkDialog()

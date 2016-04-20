@@ -14,13 +14,16 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         systemtray.cpp \
-    ideadialog.cpp
+    ideadialog.cpp \
+    tododialog.cpp
 
 HEADERS  += systemtray.h \
-    ideadialog.h
+    ideadialog.h \
+    tododialog.h
 
 FORMS    += systemtray.ui \
-    ideadialog.ui
+    ideadialog.ui \
+    tododialog.ui
 
 RESOURCES += \
     trayicon.qrc
