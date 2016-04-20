@@ -16,9 +16,13 @@ public:
 
 private slots:
     void openIdeaDialog();
+    void openToDoDialog();
+    void openBkmkDialog();
 
 private:
     QAction *ideaAction;
+    QAction *todoAction;
+    QAction *bkmkAction;
     QAction *quitAction;
     QSystemTrayIcon *trayIcon;
     QMenu *trayIconMenu;
