@@ -22,7 +22,9 @@ void TodoDialog::on_buttonBoxTodo_accepted()
     title=ui->plainTextEditTodoTitle->text();
     desc=ui->plainTextEditTodoDesc->toPlainText();
 
-    title.simplified();
+    title=title.simplified();
+    title=title.replace("/","%2F");
+    desc=desc.replace("/","%2F");
 
     QProcess::startDetached("/home/milosz/.emacs.d/org-add-todo.sh", QStringList() << qPrintable(title)  << "trayicon"  << qPrintable(desc));
 }

@@ -26,8 +26,11 @@ void IdeaDialog::on_buttonBoxIdea_accepted()
     if(source.length() == 0)
         source.append("general");
 
-    title.simplified();
-    source.simplified();
+    title=title.simplified();
+    title=title.replace("/","%2F");
+    source=source.simplified();
+    source=source.replace("/","%2F");
+    desc=desc.replace("/","%2F");
 
     QProcess::startDetached("/home/milosz/.emacs.d/org-add-idea.sh", QStringList() << qPrintable(title)  << qPrintable(source)  << qPrintable(desc));
 }
