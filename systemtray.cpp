@@ -12,7 +12,6 @@ SystemTray::SystemTray(QWidget *parent) :
 {
     createActions();
     createTrayIcon();
-
 }
 
 SystemTray::~SystemTray() {}
@@ -58,10 +57,12 @@ void SystemTray::openToDoDialog()
 {
     TodoDialog dialog;
     dialog.exec();
+    dialog.deleteLater();
 }
 
 void SystemTray::openBkmkDialog()
 {
     BkmkDialog dialog;
     dialog.exec();
+    dialog.deleteLater();
 }
