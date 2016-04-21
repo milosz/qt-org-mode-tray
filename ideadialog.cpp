@@ -31,5 +31,3 @@ void IdeaDialog::on_buttonBoxIdea_accepted()
 
     QProcess::startDetached("/home/milosz/.emacs.d/org-add-idea.sh", QStringList() << qPrintable(title)  << qPrintable(source)  << qPrintable(desc));
 }
-
-void IdeaDialog::on_buttonBoxIdea_rejected() {}

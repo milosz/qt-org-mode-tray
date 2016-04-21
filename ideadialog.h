@@ -18,7 +18,6 @@ public:
 
 private slots:
     void on_buttonBoxIdea_accepted();
-    void on_buttonBoxIdea_rejected();
 
 private:
     Ui::IdeaDialog *ui;

@@ -15,15 +15,18 @@ TEMPLATE = app
 SOURCES += main.cpp\
         systemtray.cpp \
     ideadialog.cpp \
-    tododialog.cpp
+    tododialog.cpp \
+    bkmkdialog.cpp
 
 HEADERS  += systemtray.h \
     ideadialog.h \
-    tododialog.h
+    tododialog.h \
+    bkmkdialog.h
 
 FORMS    += systemtray.ui \
     ideadialog.ui \
-    tododialog.ui
+    tododialog.ui \
+    bkmkdialog.ui
 
 RESOURCES += \
     trayicon.qrc

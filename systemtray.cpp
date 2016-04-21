@@ -3,6 +3,7 @@
 
 #include "ideadialog.h"
 #include "tododialog.h"
+#include "bkmkdialog.h"
 
 #include <QtGui>
 
@@ -50,6 +51,7 @@ void SystemTray::openIdeaDialog()
 {
     IdeaDialog dialog;
     dialog.exec();
+    dialog.deleteLater();
 }
 
 void SystemTray::openToDoDialog()
@@ -60,5 +62,6 @@ void SystemTray::openToDoDialog()
 
 void SystemTray::openBkmkDialog()
 {
-    qDebug("Add a bookmark");
+    BkmkDialog dialog;
+    dialog.exec();
 }
