@@ -137,6 +137,11 @@
    </property>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>plainTextEditBkmkTitle</tabstop>
+  <tabstop>plainTextEditBkmkSrc</tabstop>
+  <tabstop>plainTextEditBkmkDesc</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>
