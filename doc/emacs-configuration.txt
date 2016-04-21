@@ -1,0 +1,26 @@
+(add-to-list 'load-path "~/.emacs.d/org-8.3.2/lisp/")
+(add-to-list 'load-path "~/.emacs.d/org-8.3.2/contrib/lisp/" t)
+
+(require 'org)
+(require 'org-protocol)
+
+(setq org-capture-templates
+  '(   
+    ("b" "Capture link over org-protocol" 
+         entry (file+headline "/home/milosz/Dokuments/bookmarks.org" "Bookmark inbox")
+        "** %:description\n   [[%:link][%:link]] \n   CREATED: %U\n\n   %i"  
+         :immediate-finish 1 :empty-lines 1) 
+    ("t" "Capture todo over org-protocol"
+         entry (file+headline "/home/milosz/Dokuments/agenda.org" "Future tasks")
+         "** TODO %:link \n   CREATED: %U\n   SOURCE: %:description\n\n   %:initial"
+         :immediate-finish 1 :empty-lines 1 :prepend t)
+    ("i" "Capture an idea over org-protocol"
+         entry (file+headline "/home/milosz/Dokuments/blog.org" "Ideas")
+	 "** TODO %:link \n   CREATED: %U\n   SOURCE: %:description\n\n   %:initial"
+         :immediate-finish 1 :empty-lines 1 :prepend t)
+   )
+)
+
+(global-set-key "\C-cc" 'org-capture)
+
+(server-start)
